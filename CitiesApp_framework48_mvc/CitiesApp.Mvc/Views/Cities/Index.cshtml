@@ -1,0 +1,12 @@
+@model IEnumerable<City>
+
+<h2>Cities</h2>
+<p><a href="@Url.Action("Create")">Create new</a></p>
+<table>
+    <tr><th>Name</th><th>District</th><th>Population</th></tr>
+    @foreach(var c in Model) {
+        <tr>
+            <td>@c.Name</td><td>@c.District</td><td>@c.Population</td>
+        </tr>
+    }
+</table>
